@@ -1,0 +1,130 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+//svg bg mixin
+@mixin bg-svg($value, $color:#fff){
+	-webkit-mask: url(../images/#{$value}.svg) no-repeat 50% 50%;
+	mask: url(../images/#{$value}.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background-color:$color;
+}
+
+@mixin bg-sp-svg($value, $color:#fff){
+	-webkit-mask: url(../images/sprite2.svg##{$value}) no-repeat 50% 50%;
+	mask: url(../images/sprite2.svg##{$value}) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background-color:$color;
+}
+
+#wrap{
+  padding: 20px;
+  h2{
+    margin: 20px 0;
+    font-size: 20px;
+    color: #000;
+  }
+  .box{
+    padding: 10px;
+    background-color: antiquewhite;
+  }
+}
+
+//icon
+[class^="icon-"] {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+//svg tag
+.icon-close{
+  fill: transparent;
+  stroke: #000;
+  &.type2{
+    width: 30px;
+    height: 30px;
+    stroke: #fff;
+  }
+}
+.icon-arrow{
+  &.type2{
+    width: 30px;
+    height: 30px;
+    fill:blue;
+  }
+}
+.icon-order{
+  fill: transparent;
+  stroke: #fff;
+  &.type2{
+    width: 30px;
+    height: 30px;
+    fill:green;
+    stroke: #000;
+  }
+}
+
+//svg background
+.icon-youtube{
+  @include bg-svg(icon_youtube,#fff);
+  &.type2{
+    width: 30px;
+    height: 30px;
+    background-color:#000;
+  }
+}
+.icon-article{
+  @include bg-svg(icon_article,#fff);
+  &.type2{
+    width: 30px;
+    height: 30px;
+    background-color:#000;
+  }
+}
+.icon-online{
+  @include bg-svg(icon_online,#fff);
+  &.type2{
+    width: 30px;
+    height: 30px;
+    background-color:#000;
+  }
+}
+
+//svg sprite background
+.icon-chart{
+  @include bg-sp-svg(chart,#fff);
+  &.type2{
+    width: 30px;
+    height: 30px;
+    background-color:#000;
+  }
+}
+.icon-clock{
+  @include bg-sp-svg(clock,#fff);
+  &.type2{
+    width: 30px;
+    height: 30px;
+    background-color:#000;
+  }
+}
+.icon-facebook{
+  @include bg-sp-svg(facebook,#fff);
+  &.type2{
+    width: 30px;
+    height: 30px;
+    background-color:blue;
+  }
+}
+.icon-twitter{
+  @include bg-sp-svg(twitter,#000);
+  &.type2{
+    width: 30px;
+    height: 30px;
+    background-color:rgb(88, 188, 255);
+  }
+}

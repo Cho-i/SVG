@@ -1,0 +1,25 @@
+<svg width="0" height="0" style="display:none">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" id="order">
+    <g transform="translate(-24 -17)" stroke-width="1.5" fill-rule="evenodd">
+      <g transform="translate(24 17)">
+        <rect x=".75" y="2.75" width="18.5" height="15.5" rx="1"></rect>
+        <path stroke-linecap="square" d="M1.5 5.5h17"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 1.857V.143M15.5 1.857V.143M6 10.27l2.782 3.365L14 9"></path>
+      </g>
+    </g>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" id="arrow">
+    <g transform="rotate(-45 7.414 2.586)" >
+      <rect width="2" height="8" rx="1"></rect>
+      <rect transform="rotate(90 4 7)" x="3" y="3" width="2" height="8" rx="1"></rect>
+    </g>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" id="close">
+    <g transform="translate(-309 -49)" fill-rule="evenodd">
+      <g transform="translate(309.822 49.822)" stroke-width="1.5">
+        <circle cx="17.5" cy="17.5" r="16.75"></circle>
+        <path d="m10.812 10.543 14 14M24.812 10.543l-14 14" stroke-linecap="round" stroke-linejoin="round"></path>
+      </g>
+    </g>
+  </symbol>
+</svg>
