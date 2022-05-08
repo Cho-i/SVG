@@ -6,6 +6,8 @@ SVG(Scalable Vector Graphics)는 '2차원의 벡터 그래픽'을 표현하기 �
 
 1998년 W3C에서 개발을 하였고 그전에는 Microsoft의 "VML"와 Apple의 "PGML" 이라는 2차원의 백터 그래픽을 XML로 표현하는 언어가 있었습니다만, 두개다 W3C에서 채택하지 않았고 W3C는 SVG를 개발하여서 표준으로 채택하였습니다.
 
+
+
 ## 특징, 장/단점
 
 ### 장점
@@ -18,7 +20,13 @@ SVG(Scalable Vector Graphics)는 '2차원의 벡터 그래픽'을 표현하기 �
 
 ### 단점
 
-**이미지가 복잡할수록 SVG만의 장점은 감소합니다.**
+- **IE에서 확인 불가**
+
+단순svg같은 경우엔 IE9부터 지원하여 확인이 가능하나, 소개해드리는 svg background-image sprite의 경우엔 IE에서 지원하지 않는 필터사용(색상 변경)으로 확인이 불가능합니다.
+
+(* 참고 : LABS쪽에서 해당과 동일한 작업으로 이미 진행되어 있는부분 확인)
+
+- **이미지가 복잡할수록 SVG만의 장점은 감소합니다.**
 
 간단한 경우에는 JPG나 PNG보다 더 적은 용량일 수 있지만, Path가 많아지고 점점 더 무거워지면 기존이미지 포멧들보다 용량이 커질 수가 있습니다.
 
@@ -30,7 +38,7 @@ SVG(Scalable Vector Graphics)는 '2차원의 벡터 그래픽'을 표현하기 �
 
 ### 특징
 
-- HTML태그와는 달리 서로 밀어내지 않고 겹칩니다.**(display 개념이 아닙니다.)**
+- HTML태그와는 달리 서로 밀어내지 않고 겹칩니다.**(display 개념이 아니다.)**
 
 - 위치값 조절은 x,y로만 가능하며 CSS로 style지정은 가능하나 left,top등의 값은 먹지 않습니다.
 
@@ -38,11 +46,13 @@ SVG(Scalable Vector Graphics)는 '2차원의 벡터 그래픽'을 표현하기 �
 
 - SVG안에 다른 SVG를 넣는 등 부모자식의 개념도 존재합니다.
 
+
+
 ## SVG ICON 사용하기
 
 ### SVG Tag
 
-1.Img
+**1.Img**
 
 일반 이미지와 같이 요소에서 SVG를 사용할 수 있습니다.
 
@@ -57,7 +67,7 @@ SVG(Scalable Vector Graphics)는 '2차원의 벡터 그래픽'을 표현하기 �
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
-2.Inline
+**2.Inline**
 
 SVG 코드를 인라인하면 HTTP 요청은 저장되지만, 이미지는 브라우저에 캐시되지 않습니다. 조작이 가장 쉬운 방법이지만, 인라인 SVG 코드를 유지하는 것은 어려울 수 있습니다.
 
@@ -68,7 +78,7 @@ SVG 코드를 인라인하면 HTTP 요청은 저장되지만, 이미지는 브�
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
-3.Background-image
+**3.Background-image**
 
 태그가 아닌 div에 css를 이용하여, 백그라운드 이미지를 삽입할 수 있습니다. 기존의 스프라이트 이미지를 활용하는 방법과 동일하게 사용할 수 있으며, 이미지와 속성이 동일하기 때문에 작업에 어려움이 없습니다.
 
@@ -87,7 +97,9 @@ SVG 코드를 인라인하면 HTTP 요청은 저장되지만, 이미지는 브�
 
 2. sprite.svg파일 내 최상단 svg태그(부모) 내 svg(자식) 코드를 붙여 넣는다.
 
-3. html파일 내 `<i class="icon-facebook"></i>`  icon-(svg이름)으로 사용한다.
+3. 붙여놓은 svg에 id="svg이름"을 넣어준다.
+
+4. html파일 내 `<i class="icon-facebook"></i>`  icon-(svg이름)으로 사용한다.
 
 
 
@@ -95,8 +107,8 @@ SVG 코드를 인라인하면 HTTP 요청은 저장되지만, 이미지는 브�
 
 **<u>색이 이상하거나 적용안될때</u>**
 
-- 적용이 안되는 케이스는 필터를 지우고 fill/stroke 색상을 직접적으로 넣는식으로 변경
-- 감싸고있는 g 태그에 fill="none" 지움
+- 적용이 안되는 케이스는 필터를 지우고 fill/stroke 색상을 직접적으로 넣는식으로 변경한다.
+- 감싸고있는 g 태그에 fill="none" 지운다.
 
 
 
@@ -115,6 +127,8 @@ SVG는 크기가 작을 뿐만 아니라 SVG코드를 HTML의 인라인에 포�
 > [Hypertext Transfer Protocol - Wikipedia](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#HTTP_session)
 
 이전에 PNG를 활용할 때 아이콘들을 하나의 파일에 합쳐서 위치 값만으로 나머지를 숨기고 표시해서 아이콘을 보이게 했던 이유도 로딩 속도와 용량 때문입니다.
+
+
 
 ## **참고**
 
