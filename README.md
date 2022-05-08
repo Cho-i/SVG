@@ -42,13 +42,13 @@ SVG(Scalable Vector Graphics)는 '2차원의 벡터 그래픽'을 표현하기 �
 
 ### SVG Tag
 
-1. Img
-   
-   일반 이미지와 같이 요소에서 SVG를 사용할 수 있습니다.
-   
-   기존 이미지들과 동일하게 사용 할 수 있으며, 코드의 양이 적어 가독성이 뛰어납니다.
-   
-   단점은 svg파일 속에 css 속성을 입힐 수가 없으며, 굉장히 작은 사이즈의 경우 비트맵 이미지처럼 렌더링이 될수있습니다.
+1.Img
+
+일반 이미지와 같이 요소에서 SVG를 사용할 수 있습니다.
+
+기존 이미지들과 동일하게 사용 할 수 있으며, 코드의 양이 적어 가독성이 뛰어납니다.
+
+단점은 svg파일 속에 css 속성을 입힐 수가 없으며, 굉장히 작은 사이즈의 경우 비트맵 이미지처럼 렌더링이 될수있습니다.
 
 <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="jOZbYKb" data-user="cho-i" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/cho-i/pen/jOZbYKb">
@@ -57,9 +57,9 @@ SVG(Scalable Vector Graphics)는 '2차원의 벡터 그래픽'을 표현하기 �
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
-2. Inline
-   
-   SVG 코드를 인라인하면 HTTP 요청은 저장되지만, 이미지는 브라우저에 캐시되지 않습니다. 조작이 가장 쉬운 방법이지만, 인라인 SVG 코드를 유지하는 것은 어려울 수 있습니다.
+2.Inline
+
+SVG 코드를 인라인하면 HTTP 요청은 저장되지만, 이미지는 브라우저에 캐시되지 않습니다. 조작이 가장 쉬운 방법이지만, 인라인 SVG 코드를 유지하는 것은 어려울 수 있습니다.
 
 <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="bGLVaeZ" data-user="cho-i" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/cho-i/pen/bGLVaeZ">
@@ -68,9 +68,9 @@ SVG(Scalable Vector Graphics)는 '2차원의 벡터 그래픽'을 표현하기 �
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
-3. Background-image
-   
-   태그가 아닌 div에 css를 이용하여, 백그라운드 이미지를 삽입할 수 있습니다. 기존의 스프라이트 이미지를 활용하는 방법과 동일하게 사용할 수 있으며, 이미지와 속성이 동일하기 때문에 작업에 어려움이 없습니다.
+3.Background-image
+
+태그가 아닌 div에 css를 이용하여, 백그라운드 이미지를 삽입할 수 있습니다. 기존의 스프라이트 이미지를 활용하는 방법과 동일하게 사용할 수 있으며, 이미지와 속성이 동일하기 때문에 작업에 어려움이 없습니다.
 
 <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="zYRvREL" data-user="cho-i" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/cho-i/pen/zYRvREL">
@@ -79,14 +79,26 @@ SVG(Scalable Vector Graphics)는 '2차원의 벡터 그래픽'을 표현하기 �
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
-| Function            | Inline | Img       | Background-image |
-| ------------------- | ------ | --------- | ---------------- |
-| **Css 조작**          | 가능     | 일부 Inline | 일부 Inline        |
-| **Js 조작**           | 가능     | 불가능       | 불가능              |
-| **SVG 조작**          | 가능     | 가능        | 가능               |
-| **인터렉티브 SVG 애니메이션** | 가능     | 불가능       | 불가능              |
 
-## 
+
+### Background-image Sprite 작업하기
+
+1. https://jakearchibald.github.io/svgomg/ 에 SVG파일 업로드하거나 에디터에서 SVG파일 코드로 확인 후 복사한다.
+
+2. sprite.svg파일 내 최상단 svg태그(부모) 내 svg(자식) 코드를 붙여 넣는다.
+
+3. html파일 내 `<i class="icon-facebook"></i>`  icon-(svg이름)으로 사용한다.
+
+
+
+#### 작업시 유의사항
+
+**<u>색이 이상하거나 적용안될때</u>**
+
+- 적용이 안되는 케이스는 필터를 지우고 fill/stroke 색상을 직접적으로 넣는식으로 변경
+- 감싸고있는 g 태그에 fill="none" 지움
+
+
 
 ## 기대효과
 
