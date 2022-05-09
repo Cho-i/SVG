@@ -42,6 +42,13 @@
 }
 
 //svg tag
+.icon-link{
+  &.type2{
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+  }
+}
 .icon-close{
   fill: transparent;
   stroke: #000;
