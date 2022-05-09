@@ -50,7 +50,7 @@ SVG(Scalable Vector Graphics)는 '2차원의 벡터 그래픽'을 표현하기 �
 
 ## SVG ICON 사용하기
 
-### SVG Tag
+### 방법
 
 **1.Img**
 
