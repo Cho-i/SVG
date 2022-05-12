@@ -29,7 +29,7 @@
   }
   .box{
     padding: 10px;
-    background-color: antiquewhite;
+    background-color: lavender;
   }
 }
 
@@ -128,8 +128,23 @@
   }
 }
 .icon-twitter{
-  @include bg-sp-svg(twitter,#000);
+  @include bg-sp-svg(twitter,#fff);
   &.type2{
+    background-color:#000;
+  }
+  &.type3{
+    background-color:rgb(88, 188, 255);
+  }
+  &.type4{
+    width: 30px;
+    height: 30px;
+  }
+  &.type5{
+    width: 30px;
+    height: 30px;
+    background-color:#000;
+  }
+  &.type6{
     width: 30px;
     height: 30px;
     background-color:rgb(88, 188, 255);
